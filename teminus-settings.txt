@@ -29,6 +29,8 @@
   ]
   
  6. After this whenever you want to open the terminus just press "ALT+1".
+ 
+ Note : For reference see this, https://www.geeksforgeeks.org/how-to-use-terminal-in-sublime-text-editor/
 
 
     
