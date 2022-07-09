@@ -1,0 +1,16 @@
+1. Open sublime text and go to Tools->Build System->New Build System
+2. paste the following code in it
+  {
+    "cmd": [
+        "javac",
+        "$file_name",
+        "&&",
+        "java",
+        "$file_base_name"
+    ],
+    "selector": "source.java",
+    "working_dir": "${file_path}",
+    "shell": true
+  }
+3. save the above file as java.sublime-build.
+4. To run a java file in future just press "Ctrl + B".
