@@ -1,0 +1,61 @@
+1. For installing c++20 on windows we first need to install a compiler -- On windows there are three such compilers -- Mingw, Msvc, Clang llvm
+   -- we will be installing Mingw
+2. Go to https://winlibs.com/
+3. Select the latest 64bit zip version under the "release versions" and download the zip file.
+4. After downloading the zip file, extract it and then you will get a "mingw64" folder.
+5. Just copy paste this into your local C drive and now all you need to do is just set your path variable.
+6. Now in environment variables just paste "C:\mingw64\bin" and you are good to go.
+
+
+---------------------------------------------------------------------HOW TO RUN C++20 PROGRAMS------------------------------------------------------------------
+1. make a new file on desktop named as hello.cpp and paste the following code in it.
+    // C++ program to illustrate the
+    // above concepts
+    #include <bits/stdc++.h>
+    #include <compare>
+    using namespace std;
+
+    // Driver Code
+    int main()
+    {
+      int a = 91, b = 110;
+      auto ans1 = (a <=> b);
+
+      if (ans1 < 0) {
+        cout << "a < b\n";
+      }
+      else if (ans1 == 0) {
+        cout << "a == b\n";
+      }
+      else if (ans1 > 0) {
+        cout << "a > b\n";
+      }
+
+      vector<int> v1{ 3, 6, 9 };
+      vector<int> v2{ 3, 6, 9 };
+      auto ans2 = (v1 <=> v2);
+
+      if (ans2 < 0) {
+        cout << "v1 < v2\n";
+      }
+      else if (ans2 == 0) {
+
+        cout << "v1 == v2\n";
+      }
+      else if (ans2 > 0) {
+
+        cout << "v1 > v2\n";
+      }
+
+      cout << endl;
+    }
+    
+2. Now save this file as exp.cpp
+3. To run this file open command line and then type "g++ -std=c++20 exp.cpp".
+4. After the successfull compilation, an exe file would be created named as "a.exe".
+5. Just type "a.exe" or simply "a" on command line to run this file.
+6. You must see the following output
+    a < b
+    v1 == v2
+    
+--------------------------------------DONE-------------------------------------------------------------------------------------------------------------------
