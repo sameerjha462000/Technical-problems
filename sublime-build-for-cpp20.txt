@@ -1,0 +1,12 @@
+1. To make a sublime build for cpp20, go to Tools->Build System->New Build System.
+2. paste the following code in it
+   {
+    "cmd": ["g++.exe", "-std=c++20", "${file_name}",
+            "-o", "${file_base_name}.exe",
+            "&&", "${file_base_name}.exe"],
+    "file_regex": "^(..[^:]*):([0-9]+):?([0-9]+)?:? (.*)$",
+    "shell":true,
+    "working_dir":"$file_path",
+    "selector":"source.cpp"
+   }
+3. save the above file as cpp20.sublime-build.
