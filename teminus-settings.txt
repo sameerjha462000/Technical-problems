@@ -1,0 +1,34 @@
+1. for setting terminus in sublime text in windows, open command palette and then type install package.
+2. After this search for "terminus" package and then install it( This would take a sec or two).
+3. After the "terminus" has been installed we need to make some changes so that you can directly open terminal in the sublime text.
+4.Now go to Preferences >Package Settings > Terminus > Command Palette and paste this
+   [
+      {
+        "caption": "Terminal (panel)",
+        "command": "terminus_open",
+        "args"   : {
+           "cmd": "cmd.exe",
+           "cwd": "${file_path:${folder}}",
+           "title": "Command Prompt",
+           "panel_name": "Terminus"
+        }
+     },
+  ]
+  
+  5. After you have done this, go to Preferences >Package Settings > Terminus > Key Bindings
+    [
+	    {
+       "keys": ["alt+1"],
+       "command": "terminus_open",
+       "args" : {
+           "cmd": "cmd.exe",
+           "cwd": "${file_path:${folder}}",
+           "panel_name": "Terminus"
+       }
+    }
+  ]
+  
+ 6. After this whenever you want to open the terminus just press "ALT+1".
+
+
+    
